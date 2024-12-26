@@ -1,0 +1,8 @@
+---
+
+- name: Criação dos grupos
+  group:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ group_names }}"
+...

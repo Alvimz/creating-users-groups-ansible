@@ -1,0 +1,21 @@
+---
+group_names:
+  - admin
+  - host
+  - guests
+
+users_by_group:
+  guests:
+    - guests1
+    - guests2
+  host:
+    - host1
+    - host2
+  admin:
+    - admin1
+    - admin2
+
+# vars file for user_management
+
+
+...

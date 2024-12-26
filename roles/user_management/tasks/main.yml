@@ -1,0 +1,12 @@
+---
+- name: Garante criação dos grupos
+  include_tasks: groups.yml
+
+- name: Garante a criação dos usuário
+  include_tasks: users.yml
+
+
+# tasks file for user_management
+
+
+...

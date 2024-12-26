@@ -1,0 +1,8 @@
+---
+- name: Gerenciando grupos e usuários
+  become: yes
+  hosts: all
+  roles:
+    - user_management
+
+...

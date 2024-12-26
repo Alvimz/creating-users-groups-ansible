@@ -1,0 +1,28 @@
+---
+- name: Criação e adição dos usuários guests!
+  ansible.builtin.user:
+    name: "{{ item }}"
+    groups: "guests"
+    state: present
+    shell: /bin/nologin
+  loop: "{{ users_by_group['guests'] }}"
+  when: "'guests' in group_names"
+
+- name: Criação e adição dos usuários host!
+  ansible.builtin.user:
+    name: "{{ item }}"
+    groups: "host"
+    state: present
+    shell: /bin/bash
+  loop: "{{ users_by_group['host'] }}"
+  when: "'host' in group_names"
+
+- name: Criação e adição dos usuários admin!
+  ansible.builtin.user:
+    name: "{{ item }}"
+    groups: "admin"
+    state: present
+    shell: /bin/bash
+  loop: "{{ users_by_group['admin'] }}"
+  when: "'admin' in group_names"
+...
